@@ -1,8 +1,9 @@
 ---
-	- hosts: all
-	  become: yes
+    - hosts: all
+      become: yes
     
-    tasks:
+      tasks:
+      	- name: Deploy Docker
         - command: docker run -d -P 12981406/testfile:0.0.2
           register: out
         - debug: var=out
