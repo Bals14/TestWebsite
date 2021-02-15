@@ -2,5 +2,4 @@
     - hosts: all
       become: yes
       tasks:
-      - name: Deploy Docker
       - command: docker run -d -P 12981406/testfile:0.0.2
